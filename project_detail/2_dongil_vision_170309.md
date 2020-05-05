@@ -156,8 +156,7 @@ GigE 표준 카메라 인터페이스를 지원하였기 때문에 추후 타사
 
 요구사항을 고려한 화면 구성 및 동작 시나리오 검증을 위해 UI 와이어 프레임 툴인 `balsamiq` 을 활용하였다.
 
-  <img src="assets/io_ui_design.png" />
-
+ <img src="assets/io_ui_design.png" />
 
  <img src="assets/io_ui.png"/>
 
@@ -175,7 +174,7 @@ GigE 표준 카메라 인터페이스를 지원하였기 때문에 추후 타사
 
  기존 어플리케이션에 지원되는 언어인 한, 영, 중문 처리를 위해 각 버튼마다 언어별로 Normal, Focus, Disable 이미지가 각각 3개씩 총 9개가 필요했었다. 
 
-  	<img src="assets/button_image_for_start_menu.png" alt="시작화면_버튼_언어별_이미지" />
+ <img src="assets/button_image_for_start_menu.png" />
 
  따라서 지원 언어가 추가되는 경우 버튼 이미지 제작은 물론 코드도 추가로 구현해야 하는 문제가 있었다. 
 
@@ -266,28 +265,29 @@ GigE 표준 카메라 인터페이스를 지원하였기 때문에 추후 타사
 
  사용자에게 현재 연결된 디바이스 정보를 리스트로 보여주는 화면이 있었는데, 리스트의 헤더에 표시될 세부 항목 텍스트 및 리스트의 레이아웃이 포함된 배경 이미지를 사용하여 구현되어 있었다.
 
-![connect_camera_before](./assets/connect_camera_before.png)
+![connect_camera_before](assets/connect_camera_before.png)
 
  이로인해 특정 해상도(1920X1080) 이하에서나 리사이징시 화면의 내용을 확인하려면 스크롤을 하여 확인해야 하는 불편함이 있었다.
 
-![connect_camera_scroll_min](assets/connect_camera_scroll_min.PNG)
+ ![connect_camera_scroll_min](assets/connect_camera_scroll_min.PNG)
 
- ![connect_camera_scroll_normal](./assets/connect_camera_scroll_normal.PNG) 
+ ![connect_camera_scroll_normal](assets/connect_camera_scroll_normal.PNG) 
 
  그리고 화면에 출력되는 컨트롤의 배치를 리소스뷰가 아닌 코드상에서 구현되어 있어서 프로그램 실행전까지는 화면에 어떻게 보이는지 확인이 어려운 문제가 있었다.
 
-![connect_camera_resource_view_before](assets/connect_camera_resource_view_before.png)
+ ![connect_camera_resource_view_before](assets/connect_camera_resource_view_before.png)
 
  따라서 프로그램을 실행하지 않고도 각 화면의 배치를 확인할 수 있도록 리소스 뷰에서 모든 컨트롤들을 배치하고, 화면 내에서 구분되어 보여야 할 영역에 대해서는 분리하여 처리하였다. 
+ 
  ![connect_camera_resource_view_after](assets/connect_camera_resource_view_after.png)
 
  ![connect_camera_ressource_view](assets/connect_camera_ressource_view.png)
 
  또한 구현한 리사이징 기능을 적용하여 화면의 전체 컨트롤들이 화면 해상도에 상관없이 전부 디스플레이 되도록 하였다.
 
-![connect_camera_resize_before](assets/connect_camera_resize_before.png)
+ ![connect_camera_resize_before](assets/connect_camera_resize_before.png)
 
-<img src="assets/connect_camera_resize_after.png" alt="connect_camera_resize_after" style="zoom:67%;" />
+ <img src="assets/connect_camera_resize_after.png" />
 
 ##### **직관성이 낮은 화면 UI**
 
@@ -296,14 +296,16 @@ GigE 표준 카메라 인터페이스를 지원하였기 때문에 추후 타사
  해당 화면에서 연결된 디바이스 리스트 하단에 버튼을 클릭하면, 편집모드로 변경되어, 사용자가 디바이스 삭제나 아이피 어드레스 변경할 수 있도록 구현되어 있었다.
 
   하지만 기존 화면의 경우 편집모드에서 변경 가능한 항목과 아닌 것이 외관상으로는 전혀 구분되지 않았기 때문에, 처음 화면을 접했을 때 혼란스럽다는 피드백이 많았었다.
+  
  ![connect_camera_edit_before_disable](assets/connect_camera_edit_before_disable.PNG)
 
  ![connect_camera_edit_before_enable](assets/connect_camera_edit_before_enable.PNG)
 
  이에 개선한 화면에서는 편집모드로 전환시 변경가능한 항목의 배경색을 달리 표현되도록 함으로써 사용자 직관성을 높였다.
+ 
  ![connect_camera_edit_after_disable](assets/connect_camera_edit_after_disable.PNG)
 
-![connect_camera_edit_after_enable](assets/connect_camera_edit_after_enable.PNG)
+ ![connect_camera_edit_after_enable](assets/connect_camera_edit_after_enable.PNG)
 
 ##### **카메라 제어 모듈 신규 개발**
 
@@ -490,4 +492,4 @@ UI 라이브러리 사용 및 SDI 기반 UI 어플리케이션 개발을 통해 
 
 * 설정 파라미터(XML) 프로퍼티 리스트 컨트롤 출력
 
-  ![screentshot_setup_barcode_config](assets\screentshot_setup_barcode_config.png)  
+  ![screentshot_setup_barcode_config](assets/screentshot_setup_barcode_config.png)  
