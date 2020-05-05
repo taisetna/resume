@@ -269,9 +269,9 @@ GigE 표준 카메라 인터페이스를 지원하였기 때문에 추후 타사
 
  이로인해 특정 해상도(1920X1080) 이하에서나 리사이징시 화면의 내용을 확인하려면 스크롤을 하여 확인해야 하는 불편함이 있었다.
 
- ![connect_camera_scroll_min](assets/connect_camera_scroll_min.PNG)
+ ![connect_camera_scroll_min](assets/connect_camera_scroll_min.png)
 
- ![connect_camera_scroll_normal](assets/connect_camera_scroll_normal.PNG) 
+ ![connect_camera_scroll_normal](assets/connect_camera_scroll_normal.png) 
 
  그리고 화면에 출력되는 컨트롤의 배치를 리소스뷰가 아닌 코드상에서 구현되어 있어서 프로그램 실행전까지는 화면에 어떻게 보이는지 확인이 어려운 문제가 있었다.
 
@@ -297,15 +297,15 @@ GigE 표준 카메라 인터페이스를 지원하였기 때문에 추후 타사
 
   하지만 기존 화면의 경우 편집모드에서 변경 가능한 항목과 아닌 것이 외관상으로는 전혀 구분되지 않았기 때문에, 처음 화면을 접했을 때 혼란스럽다는 피드백이 많았었다.
   
- ![connect_camera_edit_before_disable](assets/connect_camera_edit_before_disable.PNG)
+ ![connect_camera_edit_before_disable](assets/connect_camera_edit_before_disable.png)
 
- ![connect_camera_edit_before_enable](assets/connect_camera_edit_before_enable.PNG)
+ ![connect_camera_edit_before_enable](assets/connect_camera_edit_before_enable.png)
 
  이에 개선한 화면에서는 편집모드로 전환시 변경가능한 항목의 배경색을 달리 표현되도록 함으로써 사용자 직관성을 높였다.
  
- ![connect_camera_edit_after_disable](assets/connect_camera_edit_after_disable.PNG)
+ ![connect_camera_edit_after_disable](assets/connect_camera_edit_after_disable.png)
 
- ![connect_camera_edit_after_enable](assets/connect_camera_edit_after_enable.PNG)
+ ![connect_camera_edit_after_enable](assets/connect_camera_edit_after_enable.png)
 
 ##### **카메라 제어 모듈 신규 개발**
 
@@ -351,7 +351,7 @@ GigE 표준 카메라 인터페이스를 지원하였기 때문에 추후 타사
 
 ### 개요
 
-자사 스마트 카메라(이하 Innoeye)에 펌웨어를 업로드 할 수 있는 어플리케이션을 개발하는 사이드 프로젝트였다. ![firm_updater_before](assets/firm_updater_before.PNG)  
+자사 스마트 카메라(이하 Innoeye)에 펌웨어를 업로드 할 수 있는 어플리케이션을 개발하는 사이드 프로젝트였다. ![firm_updater_before](assets/firm_updater_before.png)  
 
 이미 동일한 기능을 하는 어플리케이션이 존재했었으나, 단순히 Innoeye와 연결해서 펌웨어만 업로드 할 수 있는 기능 제공했었기 때문에, 현재 연결된 디바이스나 , 업로드할 펌웨어 파일의 정보 등을 확인할 수 없어 불편한 점이 있었다. 
 
