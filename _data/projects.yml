@@ -1,16 +1,60 @@
 # Projects
-# uncomment the urls if you wish to display them, and add your own URL
 
-# jazznotes.io
-- project: jazznotes.io
-  role: Founder & Primary Developer
-  duration: 2012 &mdash; Present
+# 동일비전
+# inno-eye Vision Manager For PC Sub Component Develop
+- project: inno-eye Vision Manager For PC 서브 컴퍼넌트 개발
+  role: 디바이스 제어 모듈 개발
+  duration: 2020.02.06 &mdash; 2020.03.27
   # url: "#"
-  description: Jazz Notes is an open source node/ember app that helps you keep track of your music compositions and new ideas.
+  description: <p>다수의 산업용 카메라와 연동하여 동작하는 PC 기반 머신 비전 시스템과 연동하는 서브 컴퍼넌트 개발 프로젝트였다.</p><p>시리얼 및 이더넷 기반 PLC(Programmable Logic Controller) 장치와 연동하여 동작하는 통신 모듈과 함께 AAEON社 Ultra Slim PC 내장형 디지털 입출력 보드 제어 모듈과 기존 고속 입출력 디지털 신호 처리 모듈과의 연동 부분을 맡아 개발 업무 진행하였다.</p><p>또한, 메인 어플리케이션 상에서 신규 개발된 기존 메인 시스템과 연동을 위한 PLC 통신 모듈 설정 UI 개발도 함께 진행하였다.</p><ul><li>멀티 프로토콜 서포트 PLC 컨트롤 모듈 개발</li><li>AAEON社 Ultra Slim PC 내장형 디지털 입출력 보드 제어 모듈 개발</li></ul>
 
-# Springfield Community Outreach Group
-- project: Springfield Community Outreach Group
-  role: Co-Founder & Organizer
-  duration: 2007 &mdash; Present
+# inno-eye Vision Manager For PC Application Develop
+- project: inno-eye vision manager For PC 어플리케이션 개발
+  role: 머신 비전 시스템, UI 프레임워크 개발
+  duration: 2019.01.07 &mdash; 2019.08.30
   # url: "#"
-  description: SCOG is a local monthly meetup in Springfield where we share opportunities to volunteer in the community and organize support for families and neighborhoods in need of assistance that the community can provide.
+  description: <p>여러 대의 산업용 카메라에서 촬영된 이미지들을 기반으로 비전 검사를 수행하는 PC 기반 머신 비전 시스템 개발 프로젝트였다.</o><p>기존 자사 스마트 머신 비전 카메라의 하드웨어 성능 한계로 할 수 없었던 고해상도 영상 기반 고속 비전 검사 분야에 대응하기 위함이였다.</p><p>산업용 카메라(Area Scan 타입, Basler 社) 제어 모듈, 디지털 입출력 처리 보드(Innodisk社)를 이용한 고속 입출력 신호 처리 모듈, 머신 비전 시스템 아키텍처 등 어플리케이션 전반에 걸쳐 설계 및 개발 업무 담당하였다.</p><p>또한, 어플리케이션 UI 개발도 담당하였었는데, 프로젝트 기간 단축을 위해 바로 이전 스마트 비전 카메라 어플리케이션 프로젝트의 관련 코드를 차용하였으며, 일부 UI는 당 프로젝트에 요구사항에 맞춰 다시 개발하였다.</p><p>따라서 이전 프로젝트에서 일정상 이유로 진행하지 못했던 어플리케이션 UI 구조 개선 및 UI 컨트롤 개발 작업도 병행하여 수행하였다.</p><ul><li>머신 비전 시스템 아키텍처 설계 및 구현</li><li>어플리케이션 UI 화면 설계 및 구현</li><li>JsonCpp 라이브러리를 이용한 모듈, 어플리케이션 환경 설정 파라메터 Json Serializer & Deserialer 모듈 개발</li><li>고속 디지털 입출력 신호 처리 모듈 설계 및 구현</li><li>다국어 지원을 위한 커스텀 UI 컨트롤 구현</li><li>멀티 타입 컨트롤 지원 가능한 커스텀 그리드 리스트 컨트롤 개발</li></ul>
+
+# inno-eye Vision Application Develop
+- project: inno-eye vision manager 어플리케이션 개발
+  role: 카메라 제어 모듈, 머신 비전 시스템 개발
+  duration: 2017.12.01 &mdash; 2018.12.31
+  # url: "#"
+  description: <o>자사에서 개발한 1세대 머신 비전용 스마트 카메라(Innoeye) 하드웨어 성능 개선에 맞춰 기존 릴리즈 된 스마트 카메라용 어플리케이션을 리뉴얼하는 프로젝트였다.</p><p>카메라 설정 및 촬영한 영상을 수신하는 제어 부분, 수신된 영상을 사용자 설정에 따라 검사 기준을 설정하는 비전 검사 부분, 화면에 영상을 출력하고, 사용자가 카메라 및 비전 검사 설정을 할 수 있도록 하는 UI 부분을 맡아 개발하였다.</p><ul><li>UI 설계 어플리케이션(Balsamiq)을 이용한 레이아웃 설계, 동작 시나리오 작성</li><li>상용 UI 라이브러리 BCGControlBar 및 오픈소스 UI 라이브러리를 서브클래싱한 커스텀 UI 컨트롤 개발</li><li>멀티 모니터링을 위한 설정한 카메라 수에 따른 결과 화면 컴퍼넌트 동적 생성 구조 설계 및 구현</li><li>화면 리사이징에 따른 컨트롤 포지션 및 리사이징 기능 구현</li><li>디바이스와 제어 및 이미지 데이터 수신을 위한 통신 구조 설계 및 구현</li><li>멀티 카메라 대응을 위한 내부 구조 설계 및 구현</li><li>재사용성을 위한 DLL 라이브러리로 개발</li><li>모듈 테스트 프로그램 개발</li><li>자사 비전 검사 라이브러리 성능 최적화를 위한 리펙토링 및 모듈화 작업</li>
+
+  # inno-eye Firm Updater Application Develop 
+- project: inno-eye Firm Updater 어플리케이션 개발
+  role: 어플리케이션 UI 개발
+  duration: 2018.07.02 &mdash; 2018.07.20
+  # url: "#"
+  description: <p>자사 스마트 카메라(이하 Innoeye)에 펌웨어를 업로드 할 수 있는 어플리케이션을 개발하는 사이드 프로젝트였습니다.</p><p>이미 동일한 기능을 하는 어플리케이션이 있었지만, 단순히 Innoeye와 연결해서 펌웨어만 업로드 할 수 있는 기능 제공했었기 때문에, 현재 연결된 디바이스나 업로드할 펌웨어 파일의 정보 등을 확인할 수 없어 불편한 점이 있었다.</p><p>또한 업로드 중 프로그램이 다운되는 현상이 종종 발생하여 안정성 문제도 있었기 때문에 이러한 부분을 수정 및 개선하기 위함이 목적이였다.</p><p>어플리케이션은 카메라와 연결, 제어 및 파일 업로드를 하는 부분과 연결된 카메라의 정보를 출력 및 사용자가 업로드할 카메라 연결하고 펌웨어를 선택할 수 있는 UI 부분으로 나눠지는데, 두 파트 전부 담당하여 진행하였다.</p><ul><li>UI 설계 어플리케이션(Balsamiq)을 이용한 레이아웃 설계, 동작 시나리오 작성</li><li>상용 UI 라이브러리 BCGControlBar 및 오픈소스 UI 라이브러리를 서브클래싱한 커스텀 UI 컨트롤 개발</li><li>펌웨어와 디바이스간 유효성 검증 부분 개발</li><li>업로드 프로세스 스테이트 머신 모듈 개발</li></ul>
+
+  # inno-eye Code Manager Application Develop 
+- project: inno-eye Code Manager 어플리케이션 개발
+  role: 바코드 제어 모듈, 어플리케이션 UI 개발
+  duration: 2017.03.13 &mdash; 2018.02.09
+  # url: "#"
+  description: <p>동일비전 입사 후 처음 맡았던 프로젝트로, Zebra사의 바코드 하드웨어 모듈(이하 PL3307)이 탑재된 자사 바코드 리더기와 연동하는 어플리케이션 개발을 맡았었다.</p><p>어플리케이션은 바코드 리더기와 연결하고, 동작 환경 설정 및 스캔한 영상 및 데이터를 수신하는 제어 모듈과 수신한 영상 및 데이터를 출력하고, 사용자가 리더기 동작을 설정할 수 있도록 조작하는 UI 부분으로 나눠지며, 두 파트를 전부 담당하여 진행하였다.</p><ul><li>UI 레이아웃 설계 및 동작 시나리오 작성</li><li>BCGControlBar 상용 UI 라이브러리를 활용한 MS Office 스타일 SDI 기반 UI 개발</li><li>PL3307 모듈 지원 통신 환경(USB, Serial)의 연결 상태에 따라 하나의 모듈로 제어 가능한 형태의 구조 설계 및 구현</li><li>수신 이미지 데이터 변환 및 출력 기능 구현(GDI Plus)</li><li>PLC 기능을 위해 탑재된 MCU 제어를 위한 시리얼 통신 프로토콜 구조 설계</li><li>프로그램상 파라메터 설정 및 설정 파일 입출력 처리를 위한 XML 포맷 구조 및 설계</li><li>설계한 포맷에 따른 XML 파일 Serializer, Deserializer 모듈 설계 및 구현</li><li>디바이스 스펙 정의를 위한 PL3307 SDK 기술문서 번역</li></ul>
+
+# 이노시뮬레이션
+  # 3 DOF Motion Platform For VR Contents Develop
+- project: VR 콘텐츠용 소형 모션플랫폼(3축) 개발
+  role:  모션 플랫폼 제어 시스템 및 유니티 SDK 개발
+  duration: 2016.04.18 &mdash; 2017.02.17
+  # url: "#"
+  description: <p>이노시뮬레이션에 입사하여 맡았던 첫 번째 프로젝트로, 자사에서 개발한 VR 영상 컨텐츠 어플리케이션과 연동하여 동작하는 시트 타입 모션플랫폼(3축) 을 제어하는 어플리케이션 개발 프로젝트였었다.</p><p>VR 컨텐츠와 이더넷으로 연동할 수 있는 통신 부분, 모션플랫폼 상태 수신 및 동작 시키는 제어 부분, 큐(Cue) 에디터라는 프로그램에서 생성된 모션 데이터 파일을 로딩하고, 제어부분으로 데이터를 전달하는 큐(Cue) 플레이어 부분, 각 모듈의 상태를 모니터링하고, 사용자가 모션 데이터를 불러오거나, 모션플랫폼을 수동으로 제어할 수 있는 인터페이스를 제공하는 UI 부분을 맡아 진행하였다.</p><ul><li>UI 레이아웃 설계 및 동작 시나리오 작성</li><li>MFC 기본 컨트롤을 이용한 UI 구현</li><li>설정 파라메터 입출력 인터페이스 및 파일 불러오기/저장 기능 구현</li><li>LED, FAN(DMX512 USB PRO) 압력센서(LoadCell) 제어 모듈 및 Unity 개발용 SDK 개발</li><li>데이터 송수신 통신프로토콜 구조 설계, 구현 및 문서화</li></ul>
+
+  # 3 DOF,6 DOF Motion Platform For Kobe Harbor College Tutorial Gantry Develop
+- project: 고베 항만대학 갠트리 교육 모션 플랫폼(3축,6축) 개발
+  role:  모션 플랫폼 제어 시스템 개발 및 유지보수
+  duration: 2016.08.16 &mdash; 2016.10.31
+  # url: "#"
+  description: <p>중장비용 가상훈련 유니티 어플리케이션 개발 회사인 소프트뱅크에서 발주한 프로젝트로, 트랙터 및 항만 컨테이너 하역시 사용하는 크레인인 갠트리 가상훈련용 어플리케이션과 연동하여 동작하는 모션 플랫폼 하드웨어 및 제어 어플리케이션을 제작, 납품하였다.</p><p>특이사항으로는 갠트리 가상훈련용 모션플랫폼 제어 어플리케이션의 경우 모션플랫폼에 좌우 흔들림이나 떨림 등의 효과를 발생시키는 스페셜 이펙트 모듈을 추가 개발하였다.</p><ul><li>통신 프로토콜 포맷 설계 및 모듈 개발</li><li>모션플랫폼 입출력 데이터 로그 파일 생성 기능 개발</li><li>UI 개발 환경(C#)에서 마샬링을 이용한 C++ DLL 모듈 연동 부분 개발</li><li>모션 플랫폼 초기화 루틴 개선</li></ul>
+
+# 로드텍
+ # Pavement Condion 3D Survey System Develop
+- project: 포장상태 3D 데이터 수집 시스템 어플리케이션 개발
+  role:  데이터 수집 시스템 개선 및 UI 개발
+  duration: 2015.11.30 &mdash; 2016.03.25
+  # url: "#"
+  description: <p>도로포장상태 조사장비는 도로 주행 중인 운전자의 승차감을 좌우하는 주요 요인인 도로 평탄성을 측정하는 장비이다.</p><p>차량에 장착된 여러가지 센서와 카메라를 통해 도로평탄성 분석에 필요한 데이터를 취득하며 이를 시각적으로 확인 가능하도록 화면에 이미지와 그래프등으로 출력하는 부분을 맡아 진행했었다.</p><p>특이사항으로는 로드코리아, 도로교통연구원, 한국공항공사에서 요구되는 기본 사항이 동일했었기 때문에 병행진행 했었다.</p><ul><li>다수의 카메라(Point Grey사) 제어, 화면 출력 및 파일 저장을 위한 영상 데이터 처리 모듈 개발</li><li>다른 모듈 프로세스와 데이터 송수신을 위한 공유 메모리 구조 설계 및 처리 기능 개발</li><li>IMU, 레이저 센서 통신 프로토콜 구조 설계 및 통신 모듈 구현</li><li>모듈 제어 및 데이터 수신을 위한 프로시져 설계 및 구현</li><li>Bitmasking을 이용한 데이터 패킷 파싱 루틴 설계 및 구현</li><li>여러 센서의 수신 데이터 병렬 처리를 위한 Thread 구조 설계 및 구현</li><li>수신 데이터 시각화를 위한 그래프 컨트롤 및 UI 어플리케이션 개발</li><li>exiv2 라이브러리를 이용한 GPS 좌표 데이터가 포함된 JPEG 이미지 생성 기능 개발</li><li>수집 데이터 레포트 파일 출력 기능 개발</li><li>조사중 실시간 센서 상태 모니터링 기능 구현</li></ul>
