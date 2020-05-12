@@ -1,65 +1,5 @@
 # 목차
-<!-- TOC -->
-
-- [목차](#%EB%AA%A9%EC%B0%A8)
-    - [innoeye Vision Manager For PC 어플리케이션 서브 컴퍼넌트 개발](#innoeye-vision-manager-for-pc-%EC%96%B4%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98-%EC%84%9C%EB%B8%8C-%EC%BB%B4%ED%8D%BC%EB%84%8C%ED%8A%B8-%EA%B0%9C%EB%B0%9C)
-        - [개요](#%EA%B0%9C%EC%9A%94)
-        - [세부내용](#%EC%84%B8%EB%B6%80%EB%82%B4%EC%9A%A9)
-            - [담당 파트](#%EB%8B%B4%EB%8B%B9-%ED%8C%8C%ED%8A%B8)
-                - [**멀티 프로토콜 서포트 PLC 컨트롤 모듈 개발**](#%EB%A9%80%ED%8B%B0-%ED%94%84%EB%A1%9C%ED%86%A0%EC%BD%9C-%EC%84%9C%ED%8F%AC%ED%8A%B8-plc-%EC%BB%A8%ED%8A%B8%EB%A1%A4-%EB%AA%A8%EB%93%88-%EA%B0%9C%EB%B0%9C)
-                - [**AAEON社 Ultra Slim PC 내장형 디지털 입출력 보드 제어 모듈 개발**](#aaeon%E7%A4%BE-ultra-slim-pc-%EB%82%B4%EC%9E%A5%ED%98%95-%EB%94%94%EC%A7%80%ED%84%B8-%EC%9E%85%EC%B6%9C%EB%A0%A5-%EB%B3%B4%EB%93%9C-%EC%A0%9C%EC%96%B4-%EB%AA%A8%EB%93%88-%EA%B0%9C%EB%B0%9C)
-        - [어려웠던 점](#%EC%96%B4%EB%A0%A4%EC%9B%A0%EB%8D%98-%EC%A0%90)
-            - [**담당 분야에 대한 서포트 인력 부재로 인한 개발의 어려움**](#%EB%8B%B4%EB%8B%B9-%EB%B6%84%EC%95%BC%EC%97%90-%EB%8C%80%ED%95%9C-%EC%84%9C%ED%8F%AC%ED%8A%B8-%EC%9D%B8%EB%A0%A5-%EB%B6%80%EC%9E%AC%EB%A1%9C-%EC%9D%B8%ED%95%9C-%EA%B0%9C%EB%B0%9C%EC%9D%98-%EC%96%B4%EB%A0%A4%EC%9B%80)
-        - [정리](#%EC%A0%95%EB%A6%AC)
-    - [Innoeye Vision Manager For PC 어플리케이션 개발](#innoeye-vision-manager-for-pc-%EC%96%B4%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98-%EA%B0%9C%EB%B0%9C)
-        - [개요](#%EA%B0%9C%EC%9A%94)
-        - [세부내용](#%EC%84%B8%EB%B6%80%EB%82%B4%EC%9A%A9)
-            - [담당파트](#%EB%8B%B4%EB%8B%B9%ED%8C%8C%ED%8A%B8)
-                - [산업용 카메라 제어 모듈 설계 및 구현](#%EC%82%B0%EC%97%85%EC%9A%A9-%EC%B9%B4%EB%A9%94%EB%9D%BC-%EC%A0%9C%EC%96%B4-%EB%AA%A8%EB%93%88-%EC%84%A4%EA%B3%84-%EB%B0%8F-%EA%B5%AC%ED%98%84)
-                - [고속 디지털 입출력 신호 처리 모듈 설계 및 구현](#%EA%B3%A0%EC%86%8D-%EB%94%94%EC%A7%80%ED%84%B8-%EC%9E%85%EC%B6%9C%EB%A0%A5-%EC%8B%A0%ED%98%B8-%EC%B2%98%EB%A6%AC-%EB%AA%A8%EB%93%88-%EC%84%A4%EA%B3%84-%EB%B0%8F-%EA%B5%AC%ED%98%84)
-                - [머신 비전 시스템 아키텍처 설계 및 구현](#%EB%A8%B8%EC%8B%A0-%EB%B9%84%EC%A0%84-%EC%8B%9C%EC%8A%A4%ED%85%9C-%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98-%EC%84%A4%EA%B3%84-%EB%B0%8F-%EA%B5%AC%ED%98%84)
-                - [어플리케이션 UI 화면 설계 및 구현](#%EC%96%B4%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98-ui-%ED%99%94%EB%A9%B4-%EC%84%A4%EA%B3%84-%EB%B0%8F-%EA%B5%AC%ED%98%84)
-                - [커스텀 UI 컨트롤 내부 코드 개선](#%EC%BB%A4%EC%8A%A4%ED%85%80-ui-%EC%BB%A8%ED%8A%B8%EB%A1%A4-%EB%82%B4%EB%B6%80-%EC%BD%94%EB%93%9C-%EA%B0%9C%EC%84%A0)
-                - [다국어 지원을 위한 커스텀 UI 컨트롤 구현](#%EB%8B%A4%EA%B5%AD%EC%96%B4-%EC%A7%80%EC%9B%90%EC%9D%84-%EC%9C%84%ED%95%9C-%EC%BB%A4%EC%8A%A4%ED%85%80-ui-%EC%BB%A8%ED%8A%B8%EB%A1%A4-%EA%B5%AC%ED%98%84)
-                - [멀티 타입 컨트롤 지원 가능한 커스텀 그리드 리스트 컨트롤 개발](#%EB%A9%80%ED%8B%B0-%ED%83%80%EC%9E%85-%EC%BB%A8%ED%8A%B8%EB%A1%A4-%EC%A7%80%EC%9B%90-%EA%B0%80%EB%8A%A5%ED%95%9C-%EC%BB%A4%EC%8A%A4%ED%85%80-%EA%B7%B8%EB%A6%AC%EB%93%9C-%EB%A6%AC%EC%8A%A4%ED%8A%B8-%EC%BB%A8%ED%8A%B8%EB%A1%A4-%EA%B0%9C%EB%B0%9C)
-        - [어려웠던 점](#%EC%96%B4%EB%A0%A4%EC%9B%A0%EB%8D%98-%EC%A0%90)
-            - [설계 및 구현 난도가 높았던 고속 디지털 입출력 모듈](#%EC%84%A4%EA%B3%84-%EB%B0%8F-%EA%B5%AC%ED%98%84-%EB%82%9C%EB%8F%84%EA%B0%80-%EB%86%92%EC%95%98%EB%8D%98-%EA%B3%A0%EC%86%8D-%EB%94%94%EC%A7%80%ED%84%B8-%EC%9E%85%EC%B6%9C%EB%A0%A5-%EB%AA%A8%EB%93%88)
-        - [정리](#%EC%A0%95%EB%A6%AC)
-    - [Innoeye Vision Manager 어플리케이션 개발](#innoeye-vision-manager-%EC%96%B4%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98-%EA%B0%9C%EB%B0%9C)
-        - [개요](#%EA%B0%9C%EC%9A%94)
-        - [세부내용](#%EC%84%B8%EB%B6%80%EB%82%B4%EC%9A%A9)
-            - [담당파트](#%EB%8B%B4%EB%8B%B9%ED%8C%8C%ED%8A%B8)
-                - [**외주 개발한 UI 코드 리펙토링 및 사용성 개선**](#%EC%99%B8%EC%A3%BC-%EA%B0%9C%EB%B0%9C%ED%95%9C-ui-%EC%BD%94%EB%93%9C-%EB%A6%AC%ED%8E%99%ED%86%A0%EB%A7%81-%EB%B0%8F-%EC%82%AC%EC%9A%A9%EC%84%B1-%EA%B0%9C%EC%84%A0)
-                    - [**여러곳에 산재되어 구현된 동일한 코드들**](#%EC%97%AC%EB%9F%AC%EA%B3%B3%EC%97%90-%EC%82%B0%EC%9E%AC%EB%90%98%EC%96%B4-%EA%B5%AC%ED%98%84%EB%90%9C-%EB%8F%99%EC%9D%BC%ED%95%9C-%EC%BD%94%EB%93%9C%EB%93%A4)
-                    - [**배경 이미지에 전적으로 의존한 화면 구현**](#%EB%B0%B0%EA%B2%BD-%EC%9D%B4%EB%AF%B8%EC%A7%80%EC%97%90-%EC%A0%84%EC%A0%81%EC%9C%BC%EB%A1%9C-%EC%9D%98%EC%A1%B4%ED%95%9C-%ED%99%94%EB%A9%B4-%EA%B5%AC%ED%98%84)
-                    - [**직관성이 낮은 화면 UI**](#%EC%A7%81%EA%B4%80%EC%84%B1%EC%9D%B4-%EB%82%AE%EC%9D%80-%ED%99%94%EB%A9%B4-ui)
-                - [**카메라 제어 모듈 신규 개발**](#%EC%B9%B4%EB%A9%94%EB%9D%BC-%EC%A0%9C%EC%96%B4-%EB%AA%A8%EB%93%88-%EC%8B%A0%EA%B7%9C-%EA%B0%9C%EB%B0%9C)
-        - [어려웠던 점](#%EC%96%B4%EB%A0%A4%EC%9B%A0%EB%8D%98-%EC%A0%90)
-            - [**외주 관리 업체와의 소통의 어려움**](#%EC%99%B8%EC%A3%BC-%EA%B4%80%EB%A6%AC-%EC%97%85%EC%B2%B4%EC%99%80%EC%9D%98-%EC%86%8C%ED%86%B5%EC%9D%98-%EC%96%B4%EB%A0%A4%EC%9B%80)
-        - [정리](#%EC%A0%95%EB%A6%AC)
-        - [스크린샷](#%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7)
-    - [Innoeye Firmware Updator 어플리케이션 개발](#innoeye-firmware-updator-%EC%96%B4%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98-%EA%B0%9C%EB%B0%9C)
-        - [개요](#%EA%B0%9C%EC%9A%94)
-        - [세부내용](#%EC%84%B8%EB%B6%80%EB%82%B4%EC%9A%A9)
-            - [담당파트](#%EB%8B%B4%EB%8B%B9%ED%8C%8C%ED%8A%B8)
-                - [**UI 설계 및 개발**](#ui-%EC%84%A4%EA%B3%84-%EB%B0%8F-%EA%B0%9C%EB%B0%9C)
-                - [**UI와 제어 모듈간 연동**](#ui%EC%99%80-%EC%A0%9C%EC%96%B4-%EB%AA%A8%EB%93%88%EA%B0%84-%EC%97%B0%EB%8F%99)
-        - [어려웠던 점](#%EC%96%B4%EB%A0%A4%EC%9B%A0%EB%8D%98-%EC%A0%90)
-            - [**MFC 프레임워크상 디자인한 UI 구현 한계**](#mfc-%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%EC%83%81-%EB%94%94%EC%9E%90%EC%9D%B8%ED%95%9C-ui-%EA%B5%AC%ED%98%84-%ED%95%9C%EA%B3%84)
-        - [정리](#%EC%A0%95%EB%A6%AC)
-        - [스크린샷](#%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7)
-    - [Innoeye Code Manager 어플리케이션 개발](#innoeye-code-manager-%EC%96%B4%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98-%EA%B0%9C%EB%B0%9C)
-        - [개요](#%EA%B0%9C%EC%9A%94)
-        - [세부내용](#%EC%84%B8%EB%B6%80%EB%82%B4%EC%9A%A9)
-            - [담당파트](#%EB%8B%B4%EB%8B%B9%ED%8C%8C%ED%8A%B8)
-                - [**UI 설계, 구현 및 제어 모듈 연동 작업**](#ui-%EC%84%A4%EA%B3%84-%EA%B5%AC%ED%98%84-%EB%B0%8F-%EC%A0%9C%EC%96%B4-%EB%AA%A8%EB%93%88-%EC%97%B0%EB%8F%99-%EC%9E%91%EC%97%85)
-                - [**PL3307 제어 모듈 개발**](#pl3307-%EC%A0%9C%EC%96%B4-%EB%AA%A8%EB%93%88-%EA%B0%9C%EB%B0%9C)
-        - [어려웠던 점](#%EC%96%B4%EB%A0%A4%EC%9B%A0%EB%8D%98-%EC%A0%90)
-            - [**낯선 분야에 대한 개발의 어려움**](#%EB%82%AF%EC%84%A0-%EB%B6%84%EC%95%BC%EC%97%90-%EB%8C%80%ED%95%9C-%EA%B0%9C%EB%B0%9C%EC%9D%98-%EC%96%B4%EB%A0%A4%EC%9B%80)
-        - [정리](#%EC%A0%95%EB%A6%AC)
-        - [스크린샷](#%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7)
-
-<!-- /TOC -->
+[TOC]
 
 ## innoeye Vision Manager For PC 어플리케이션 서브 컴퍼넌트 개발
 
@@ -79,7 +19,7 @@
 
 #### 담당 파트
 
-##### **멀티 프로토콜 서포트 PLC 컨트롤 모듈 개발**
+##### 멀티 프로토콜 서포트 PLC 컨트롤 모듈 개발
 
 PLC는 Programmable Logic Controller의 약자로 공장 자동화 라인에서 스마트 카메라나 감지 센서 등 다양한 기기들과 연동하여 제어 및 모니터링에 사용하는 제어 장치이다.
 
@@ -126,7 +66,7 @@ PLC는 Programmable Logic Controller의 약자로 공장 자동화 라인에서 
 
 따라서 프로토콜별 명세에 따라 생성된 더미 데이터를 단위테스트를 이용하여 개발을 진행하였고, 그 결과 정해진 일정에 큰 지연 없이 무사히 개발을 끝마칠 수 있었다.
 
-##### **AAEON社 Ultra Slim PC 내장형 디지털 입출력 보드 제어 모듈 개발**
+##### AAEON社 Ultra Slim PC 내장형 디지털 입출력 보드 제어 모듈 개발
 
 이번 프로젝트의 또 다른 목표 중 하나는 다양한 자동화 생산 설비에 활용할 수 있도록 현재 비전 시스템에서 지원하는 디지털 입출력 보드의 가짓수를 늘리는 것이었다.
 
@@ -140,7 +80,8 @@ PLC는 Programmable Logic Controller의 약자로 공장 자동화 라인에서 
 
 ### 어려웠던 점
 
-#### **담당 분야에 대한 서포트 인력 부재로 인한 개발의 어려움**
+#### 담당 분야에 대한 서포트 인력 부재로 인한 개발의 어려움
+
 지금까지 수행해온 프로젝트들이 대부분 새로운 분야에 대해서 진행하는 경우가 많았는데, 해당 분야에 대해 개발할 때마다 제반 지식을 쌓고 이를 개발에 응용하는 것은 현실적으로 불가능하므로, 이를 보완해줄 전문 인력의 지원이 무엇보다 중요하다.
 
 예를 들어 "이노시뮬레이션"에서 개발했었던 "모션 플랫폼 시트 제어 어플리케이션"의 경우, 모션 시트를 프로그래밍 적으로 제어하기 위해선 "역기구학"(Inverse Kinematics)" 알고리즘이 필요했었는데, 당시 이 부분은 제어계측공학"을 전공한 전문 인력이 담당하여 초기 기획 단계부터 개발, 검증까지 전 과정에 걸쳐 함께 수행했었기 때문에 프로젝트를 큰 일정 지연 없이 신속하고 성공적으로 끝낼 수 있었다.
@@ -173,7 +114,7 @@ PLC는 Programmable Logic Controller의 약자로 공장 자동화 라인에서 
 
 #### 담당파트
 
-**JsonCpp 라이브러리를 이용한 모듈, 어플리케이션 환경 설정 파라메터 Json Serializer & Deserialer 모듈 개발** 
+##### JsonCpp 라이브러리를 이용한 모듈, 어플리케이션 환경 설정 파라메터 Json Serializer & Deserialer 모듈 개발
 
 이전 프로젝트까지는 모듈 및 어플리케이션의 환경 설정 파라메터를 INI 파일로 저장하고 불러와서 적용하는 방식을 사용했었다.
 
@@ -219,9 +160,9 @@ GigE 표준 카메라 인터페이스를 지원하였기 때문에 추후 타사
 
 요구사항을 고려한 화면 구성 및 동작 시나리오 검증을 위해 UI 와이어 프레임 툴인 `balsamiq` 을 활용하였다.
 
- <img src="assets/io_ui_design.png" />
+![io_ui_design](assets/io_ui_design.png)
 
- <img src="assets/io_ui.png"/>
+![io_io](assets/io_ui.png)
 
 ##### 커스텀 UI 컨트롤 내부 코드 개선
 
@@ -237,7 +178,7 @@ GigE 표준 카메라 인터페이스를 지원하였기 때문에 추후 타사
 
  기존 어플리케이션에 지원되는 언어인 한, 영, 중문 처리를 위해 각 버튼마다 언어별로 Normal, Focus, Disable 이미지가 각각 3개씩 총 9개가 필요했었다. 
 
- <img src="assets/button_image_for_start_menu.png" />
+ ![button_image_for_start_menu](assets/button_image_for_start_menu.png)
 
  따라서 지원 언어가 추가되는 경우 버튼 이미지 제작은 물론 코드도 추가로 구현해야 하는 문제가 있었다. 
 
@@ -245,10 +186,12 @@ GigE 표준 카메라 인터페이스를 지원하였기 때문에 추후 타사
 
  그 결과 버튼 컨트롤의 이미지 리소스 갯수는 1/3로 줄이고, 구현해야할 코드량도 줄이는 성과를 얻을 수 있었다.  
 
-<img src="assets/1568721030717.png" alt="시작화면_버튼_초기화_수정_전" />
-  	  <img src="assets/1568721014676.png" alt="시작화면_버튼_초기화_수정_"  />
+![screenshot_start_menu_button_init_code_before](assets/screenshot_start_menu_button_init_code_before.png)
 
- <img src="assets/1568720974413.png" alt="시작메뉴화면_수정후" />
+![screenshot_start_menu_button_init_code_after](assets/screenshot_start_menu_button_init_code_after.png)
+
+![screentshot_start_menu_after](assets/screentshot_start_menu_after.png)
+
 
 ##### 멀티 타입 컨트롤 지원 가능한 커스텀 그리드 리스트 컨트롤 개발
 
@@ -308,15 +251,15 @@ GigE 표준 카메라 인터페이스를 지원하였기 때문에 추후 타사
 
 #### 담당파트
 
-##### **외주 개발한 UI 코드 리펙토링 및 사용성 개선**
+##### 외주 개발한 UI 코드 리펙토링 및 사용성 개선
 
 사내에 전문 UI 디자이너의 부재와 개발인원의 부족에 따라외주 전문업체에 의뢰하여 진행하였다. 
 
 전달받은 산출물을 기본 구조를 제외한 나머지 부분에 대한 리펙토링 및 사용성 부분 개선 작업을 추가로 진행했었는데 그 이유는 다음과 같다.
 
-###### **여러곳에 산재되어 구현된 동일한 코드들**
+###### 여러곳에 산재되어 구현된 동일한 코드들
 
- 화면 내 배치된 컨트롤들의 리사이징 처리나 특정 키 입력에 따른 다이얼로그 종료(***MFC 다이얼로그 클래스는 Enter, ESC 키 입력시 포커스된 다이얼로그가 자동으로 종료된다**) 처리 무시 등 각 화면 클래스에서 공통적으로 동작하는 기능에 대한 코드들이 개별적으로 구현되어 있었다.
+ 화면 내 배치된 컨트롤들의 리사이징 처리나 특정 키 입력에 따른 다이얼로그 종료(**MFC 다이얼로그 클래스는 Enter, ESC 키 입력시 포커스된 다이얼로그가 자동으로 종료된다**) 처리 무시 등 각 화면 클래스에서 공통적으로 동작하는 기능에 대한 코드들이 개별적으로 구현되어 있었다.
 
  그래서 수정 사항 발생시 각 화면 클래스 코드들에서 해당하는 부분을 찾아 일일히 수정해야 했기 때문에 유지보수에 어려움이 있었다. 
 
@@ -324,7 +267,7 @@ GigE 표준 카메라 인터페이스를 지원하였기 때문에 추후 타사
 
  그 결과 기존에 비해 유지보수가 한결 편해졌음은 물론 각 화면 클래스에서는 세부적으로 필요한 기능만 구현함으로써 코드의 양 또한 줄일 수 있었다.
 
-###### **배경 이미지에 전적으로 의존한 화면 구현**
+###### 배경 이미지에 전적으로 의존한 화면 구현
 
  사용자에게 현재 연결된 디바이스 정보를 리스트로 보여주는 화면이 있었는데, 리스트의 헤더에 표시될 세부 항목 텍스트 및 리스트의 레이아웃이 포함된 배경 이미지를 사용하여 구현되어 있었다.
 
@@ -341,7 +284,7 @@ GigE 표준 카메라 인터페이스를 지원하였기 때문에 추후 타사
  ![connect_camera_resource_view_before](assets/connect_camera_resource_view_before.png)
 
  따라서 프로그램을 실행하지 않고도 각 화면의 배치를 확인할 수 있도록 리소스 뷰에서 모든 컨트롤들을 배치하고, 화면 내에서 구분되어 보여야 할 영역에 대해서는 분리하여 처리하였다. 
- 
+
  ![connect_camera_resource_view_after](assets/connect_camera_resource_view_after.png)
 
  ![connect_camera_ressource_view](assets/connect_camera_ressource_view.png)
@@ -352,25 +295,25 @@ GigE 표준 카메라 인터페이스를 지원하였기 때문에 추후 타사
 
  <img src="assets/connect_camera_resize_after.png" />
 
-###### **직관성이 낮은 화면 UI**
+###### 직관성이 낮은 화면 UI
 
  일부 화면 UI의 경우 직관성이 떨어져 사용자에게 모호함을 주기도 했었는데, 그 대표적인 예가 카메라 연결 화면이다.
 
  해당 화면에서 연결된 디바이스 리스트 하단에 버튼을 클릭하면, 편집모드로 변경되어, 사용자가 디바이스 삭제나 아이피 어드레스 변경할 수 있도록 구현되어 있었다.
 
   하지만 기존 화면의 경우 편집모드에서 변경 가능한 항목과 아닌 것이 외관상으로는 전혀 구분되지 않았기 때문에, 처음 화면을 접했을 때 혼란스럽다는 피드백이 많았었다.
-  
+
  ![connect_camera_edit_before_disable](assets/connect_camera_edit_before_disable.png)
 
  ![connect_camera_edit_before_enable](assets/connect_camera_edit_before_enable.png)
 
  이에 개선한 화면에서는 편집모드로 전환시 변경가능한 항목의 배경색을 달리 표현되도록 함으로써 사용자 직관성을 높였다.
- 
+
  ![connect_camera_edit_after_disable](assets/connect_camera_edit_after_disable.png)
 
  ![connect_camera_edit_after_enable](assets/connect_camera_edit_after_enable.png)
 
-##### **카메라 제어 모듈 신규 개발**
+##### 카메라 제어 모듈 신규 개발
 
 기존 구현된 카메라 제어 모듈이 있었지만, 두가지 이유로 인해 새로 개발을 진행했었다.
 
@@ -380,7 +323,7 @@ GigE 표준 카메라 인터페이스를 지원하였기 때문에 추후 타사
 
 ### 어려웠던 점
 
-#### **외주 관리 업체와의 소통의 어려움**
+#### 외주 관리 업체와의 소통의 어려움
 
  프로젝트 일정을 맞추기 위해 UI 디자인 및 개발 부분을 외주로 진행했었는데, 이것이 오히려 프로젝트를 지연시키는 요인이 되었다. 
 
@@ -398,17 +341,19 @@ GigE 표준 카메라 인터페이스를 지원하였기 때문에 추후 타사
 
 ### 스크린샷
 
+* 커스텀 프로세스 컨트롤바 데모
+
+    ![demo_custom_progess_control](assets/demo_custom_progress_control.gif)
+
 * 프로그램 실행화면(초점조정 안내)
 
   ![screenshot_setting_focus](assets/screenshot_setting_focus.png)
 
-    
-
-* 프로그램 실행화면2(검사파일 관리)  ![screenshot_inspection_file_managel](assets/screenshot_inspection_file_manage.bmp)  
+* 프로그램 실행화면2(검사파일 관리)  ![screenshot_inspection_file_managel](assets/screenshot_inspection_file_manage.png)  
 
 * 프로그램 실행화면3(실시간검사)
 
-    ![screenshot_realtime_inspection](assets/screenshot_realtime_inspection.bmp)  
+    ![screenshot_realtime_inspection](assets/screenshot_realtime_inspection.png)  
 
 ## Innoeye Firmware Updator 어플리케이션 개발
 
@@ -442,17 +387,17 @@ GigE 표준 카메라 인터페이스를 지원하였기 때문에 추후 타사
 
 개발 전, UI 목업 제작 어플리케이션 툴인 'Balsamiq'을 사용하여, 레이아웃 및 동작 시나리오를 검증하였다.
 
-![firm_updater_ui_design](assets/firm_updater_ui_design.bmp)  
+![firm_updater_ui_design](assets/firm_updater_ui_design.png)  
 
 UI 화면 개발시 기존 어플리케이션과 디자인적으로 차별화를 주기 위해 MFC 기본 컨트롤을 사용하는 대신 Innoeye Vision Manager 프로젝트 UI 개발 코드를 일부 활용하였다.
 
-##### **UI와 제어 모듈간 연동**
+##### UI와 제어 모듈간 연동
 
 Innoeye Vision Manager 프로젝트시 이미 연동 작업을 수행한 경험이 있었고, 해당 어플리케이션 비하면 사용자 조작에 따른 UI상 처리해야 할 부분들이 적었기 때문에 작업을 진행하는데 크게 문제가 없었다.
 
 ### 어려웠던 점
 
-#### **MFC 프레임워크상 디자인한 UI 구현 한계**
+#### MFC 프레임워크상 디자인한 UI 구현 한계
 
 inno-eye Vision Manager 프로젝트에서도 겪었던 문제이긴 한데, MFC 프레임워크상의 한계인지는 몰라도 프로그램 화면에 보이는 UI와 디자인 툴로 작성한 것과의 차이를 줄이는 부분이 많이 어려웠었다.
 
@@ -468,17 +413,13 @@ UI의 디테일한 부분도 이번 프로젝트에서 중요한 부분으로 �
 
 ### 스크린샷
 
-* 프로그램 메인화면
+* 펌웨어 업로드 프로세스 화면
 
-    ![screenshot_firm_updater_main_ui](assets/screenshot_firm_updater_main_ui.bmp)  
-
-* 프로세스 알림 화면
-
-  ![screenshot_firm_updater_process_alert](assets/screenshot_firm_updater_process_alert.bmp)  
+  ![innoeye_firm_updater_process_update_firmware](assets/innoeye_firm_updater_process_update_firmware.gif)  
 
 * 디바이스 및 펌웨어 정보 출력화면
 
-  ![screenshot_firm_updater_display_info](assets/screenshot_firm_updater_display_info.bmp)  
+  ![innoeye_firm_updater_display_info](assets/innoeye_firm_updater_display_info.gif)  
 
 ## Innoeye Code Manager 어플리케이션 개발
 
@@ -507,7 +448,7 @@ SDI 구조를 채택한 이유는 두가지로, 첫번째는 UI 디자인 레퍼
 
 UI 개발시 유료 UI 라이브러리인 BCGSoft사의 BCGControlBar를 사용했다. SDI 기반 개발에 참고할만한 풍부한 샘플 코드와 메뉴 디자인을 위한 UI 설계 프로그램이 제공되었기 때문이었다.
 
-  ![main_page_bcgcontrolbar](assets/main_page_bcgcontrolbar.bmp)  
+  ![main_page_bcgcontrolbar](assets/main_page_bcgcontrolbar.png)  
 
 100 여개가 넘는 설정 파라메터를 손쉽게 처리 하기 위해 데이터 포멧은 XML,데이터 입출력에는 tinyXML 라이브러리를 사용하였다. 
 

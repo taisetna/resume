@@ -1,34 +1,5 @@
 # 목차
-<!-- TOC -->
-
-- [목차](#%EB%AA%A9%EC%B0%A8)
-    - [VR 콘텐츠용 소형 모션 플랫폼(3축 ) 개발](#vr-%EC%BD%98%ED%85%90%EC%B8%A0%EC%9A%A9-%EC%86%8C%ED%98%95-%EB%AA%A8%EC%85%98-%ED%94%8C%EB%9E%AB%ED%8F%BC3%EC%B6%95--%EA%B0%9C%EB%B0%9C)
-        - [개요](#%EA%B0%9C%EC%9A%94)
-        - [세부내용](#%EC%84%B8%EB%B6%80%EB%82%B4%EC%9A%A9)
-        - [담당파트](#%EB%8B%B4%EB%8B%B9%ED%8C%8C%ED%8A%B8)
-            - [**VR 영상 컨텐츠 앱용 모션 플랫폼 제어 통신 프로토콜 설계**](#vr-%EC%98%81%EC%83%81-%EC%BB%A8%ED%85%90%EC%B8%A0-%EC%95%B1%EC%9A%A9-%EB%AA%A8%EC%85%98-%ED%94%8C%EB%9E%AB%ED%8F%BC-%EC%A0%9C%EC%96%B4-%ED%86%B5%EC%8B%A0-%ED%94%84%EB%A1%9C%ED%86%A0%EC%BD%9C-%EC%84%A4%EA%B3%84)
-            - [**VR 컨텐츠 앱과 연동을 위한 통신 모듈 개발**](#vr-%EC%BB%A8%ED%85%90%EC%B8%A0-%EC%95%B1%EA%B3%BC-%EC%97%B0%EB%8F%99%EC%9D%84-%EC%9C%84%ED%95%9C-%ED%86%B5%EC%8B%A0-%EB%AA%A8%EB%93%88-%EA%B0%9C%EB%B0%9C)
-            - [**큐(Cue) 플레이어 모듈 개발**](#%ED%81%90cue-%ED%94%8C%EB%A0%88%EC%9D%B4%EC%96%B4-%EB%AA%A8%EB%93%88-%EA%B0%9C%EB%B0%9C)
-            - [**모션컨트롤러 제어 모듈 개발**](#%EB%AA%A8%EC%85%98%EC%BB%A8%ED%8A%B8%EB%A1%A4%EB%9F%AC-%EC%A0%9C%EC%96%B4-%EB%AA%A8%EB%93%88-%EA%B0%9C%EB%B0%9C)
-            - [**UI 부분 개발**](#ui-%EB%B6%80%EB%B6%84-%EA%B0%9C%EB%B0%9C)
-        - [어려웠던 점](#%EC%96%B4%EB%A0%A4%EC%9B%A0%EB%8D%98-%EC%A0%90)
-            - [**MFC 타이머의 성능 한계에 따른 어려움**](#mfc-%ED%83%80%EC%9D%B4%EB%A8%B8%EC%9D%98-%EC%84%B1%EB%8A%A5-%ED%95%9C%EA%B3%84%EC%97%90-%EB%94%B0%EB%A5%B8-%EC%96%B4%EB%A0%A4%EC%9B%80)
-        - [정리](#%EC%A0%95%EB%A6%AC)
-        - [스크린샷](#%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7)
-    - [고베 항만대학 겐트리 교육 모션 플랫폼(3축,6축) 개발](#%EA%B3%A0%EB%B2%A0-%ED%95%AD%EB%A7%8C%EB%8C%80%ED%95%99-%EA%B2%90%ED%8A%B8%EB%A6%AC-%EA%B5%90%EC%9C%A1-%EB%AA%A8%EC%85%98-%ED%94%8C%EB%9E%AB%ED%8F%BC3%EC%B6%956%EC%B6%95-%EA%B0%9C%EB%B0%9C)
-        - [개요](#%EA%B0%9C%EC%9A%94)
-        - [세부내용](#%EC%84%B8%EB%B6%80%EB%82%B4%EC%9A%A9)
-        - [담당파트](#%EB%8B%B4%EB%8B%B9%ED%8C%8C%ED%8A%B8)
-            - [**모션플랫폼 제어 모듈 유지보수**](#%EB%AA%A8%EC%85%98%ED%94%8C%EB%9E%AB%ED%8F%BC-%EC%A0%9C%EC%96%B4-%EB%AA%A8%EB%93%88-%EC%9C%A0%EC%A7%80%EB%B3%B4%EC%88%98)
-            - [**스페셜 이펙트 모듈 유지보수**](#%EC%8A%A4%ED%8E%98%EC%85%9C-%EC%9D%B4%ED%8E%99%ED%8A%B8-%EB%AA%A8%EB%93%88-%EC%9C%A0%EC%A7%80%EB%B3%B4%EC%88%98)
-            - [**트렉터용 모션플랫폼 제어 모듈 초기화 로직 개선**](#%ED%8A%B8%EB%A0%89%ED%84%B0%EC%9A%A9-%EB%AA%A8%EC%85%98%ED%94%8C%EB%9E%AB%ED%8F%BC-%EC%A0%9C%EC%96%B4-%EB%AA%A8%EB%93%88-%EC%B4%88%EA%B8%B0%ED%99%94-%EB%A1%9C%EC%A7%81-%EA%B0%9C%EC%84%A0)
-            - [**UI 부분 개발**](#ui-%EB%B6%80%EB%B6%84-%EA%B0%9C%EB%B0%9C)
-        - [어려웠던점](#%EC%96%B4%EB%A0%A4%EC%9B%A0%EB%8D%98%EC%A0%90)
-            - [**C# 환경에서 C++ 코드 디버깅**](#c-%ED%99%98%EA%B2%BD%EC%97%90%EC%84%9C-c-%EC%BD%94%EB%93%9C-%EB%94%94%EB%B2%84%EA%B9%85)
-        - [정리](#%EC%A0%95%EB%A6%AC)
-        - [스크린샷](#%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7)
-
-<!-- /TOC -->
+[TOC]
 
 ## VR 콘텐츠용 소형 모션 플랫폼(3축 ) 개발
 
@@ -36,9 +7,9 @@
 
 이노시뮬레이션에 입사하여 맡았던 첫번째 프로젝트로, 자사에서 개발한 VR 영상 컨텐츠 어플리케이션과  연동하여 동작하는 시트 타입 모션플랫폼(3축) 을 제어하는 어플리케이션 개발 프로젝트였다.
 
- ![screenshot_motion_seat](assets/screenshot_motion_seat.bmp)  
+ ![screenshot_motion_seat](assets/screenshot_motion_seat.png)  
 
-  ![diagram_motion_contol_system](assets/diagram_motion_contol_system.bmp)  
+  ![diagram_motion_contol_system](assets/diagram_motion_contol_system.png)  
 
 어플리케이션은 VR 컨텐츠 앱과 이더넷으로 연동할 수 있는 통신 부분, 모션플랫폼 상태 수신 및 동작 시키는 제어 부분, 큐(Cue) 에디터라는 프로그램에서 생성된 모션 데이터 파일을 로딩하고, 제어부분으로 데이터를 전달하는 큐(Cue) 플레이어 부분, 각 모듈의 상태를 모니터링하고, 사용자가 모션 데이터를 불러오거나, 모션플랫폼을 수동으로 제어할 수 있는 인터페이스를 제공하는  UI 부분으로 구성되어 있다. 
 
@@ -112,7 +83,7 @@ VR 영상 컨텐츠와 모션플랫폼의 싱크가 최우선이었는데 기존
 
 * 어플리케이션 실행화면
 
-    ![screenshot_motion_control_application](assets/screenshot_motion_control_application.bmp)  
+    ![screenshot_motion_control_application](assets/screenshot_motion_control_application.png)  
 
 ## 고베 항만대학 겐트리 교육 모션 플랫폼(3축,6축) 개발
 
@@ -120,7 +91,7 @@ VR 영상 컨텐츠와 모션플랫폼의 싱크가 최우선이었는데 기존
 
 중장비용 가상훈련 유니티 어플리케이션 개발 회사인 소프트뱅크에서 발주한 프로젝트로, 트랙터 및 항만 컨테이너 하역시 사용하는 크레인인 겐트리 가상훈련용 어플리케이션과 연동하여 동작하는 모션 플랫폼 하드웨어 및 제어 어플리케이션을 제작, 납품하였다.
 
-  ![gantry](assets/gantry.bmp)  
+  ![gantry](assets/gantry.png)  
 
 제어 어플리케이션은 유니티 어플리케이션이 구동되는 PC와는 다른 PC에 별개로 실행되었기 때문에 이더넷으로 연동하는 통신부분, 모션플랫폼의 상태데이터를 수신하고, 동작 시키는 제어부분, 모션플랫폼의 상태를 모니터링 하고, 사용자가 조작시킬 수 있는 UI 부분으로 구성되어 있다.
 
@@ -206,11 +177,11 @@ C# 언어로 개발/유지보수한 첫번째 프로젝트에 C++ 코드가 포�
 
 *  트랙터용 모션 플랫폼(3축) 어플리케이션 실행화면 
 
- ![screenshot_3dof_motion_control_system](assets/screenshot_3dof_motion_control_system.bmp)  
+ ![screenshot_3dof_motion_control_system](assets/screenshot_3dof_motion_control_system.png)  
 
   
 
 * 갠트리용 모션 플랫폼(6축) 어플리케이션 실행화면  
 
- ![screenshot_6dof_motion_control_system](assets/screenshot_6dof_motion_control_system.bmp)  
+ ![screenshot_6dof_motion_control_system](assets/screenshot_6dof_motion_control_system.png)  
 
