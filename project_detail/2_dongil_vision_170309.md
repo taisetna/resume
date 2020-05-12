@@ -1,5 +1,4 @@
-# 목차
-[TOC]
+{:TOC}
 
 ## innoeye Vision Manager For PC 어플리케이션 서브 컴퍼넌트 개발
 
@@ -484,11 +483,11 @@ UI 라이브러리 사용 및 SDI 기반 UI 어플리케이션 개발을 통해 
 
 * 멀티 바코드 스캔 설정
 
-    ![screenshot_setup_multibarcode_scan](assets/screenshot_setup_multibarcode_scan.png)
+    ![2didreader_multibarcode_setup](assets/2didreader_multicode_setup.gif)
 
 * ROI 영역 설정 및 영상출력
 
-    ![screentshot_dislplay_roiarea_image](assets/screentshot_dislplay_roiarea_image.png)  
+    ![2didreader_capture_live_image](assets/2didreader_capture_live_image.gif)  
 
 * 바코드 영상 출력 및 스캔환경 설정
 
