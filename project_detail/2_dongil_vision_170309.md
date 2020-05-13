@@ -272,9 +272,7 @@ GigE 표준 카메라 인터페이스를 지원하였기 때문에 추후 타사
 
  이로인해 특정 해상도(1920X1080) 이하에서나 리사이징시 화면의 내용을 확인하려면 스크롤을 하여 확인해야 하는 불편함이 있었다.
 
- ![connect_camera_scroll_min](assets/connect_camera_scroll_min.png)
-
- ![connect_camera_scroll_normal](assets/connect_camera_scroll_normal.png) 
+ ![vision_manager_program_resize_before](assets/vision_manager_program_resize_before.gif)
 
  그리고 화면에 출력되는 컨트롤의 배치를 리소스뷰가 아닌 코드상에서 구현되어 있어서 프로그램 실행전까지는 화면에 어떻게 보이는지 확인이 어려운 문제가 있었다.
 
@@ -288,9 +286,7 @@ GigE 표준 카메라 인터페이스를 지원하였기 때문에 추후 타사
 
  또한 구현한 리사이징 기능을 적용하여 화면의 전체 컨트롤들이 화면 해상도에 상관없이 전부 디스플레이 되도록 하였다.
 
- ![connect_camera_resize_before](assets/connect_camera_resize_before.png)
-
- <img src="assets/connect_camera_resize_after.png" />
+ ![vision_manager_program_resize_after](assets/vision_manager_program_resize_after.gif)
 
 ###### 직관성이 낮은 화면 UI
 
@@ -350,7 +346,7 @@ GigE 표준 카메라 인터페이스를 지원하였기 때문에 추후 타사
 
 * 프로그램 실행화면3(실시간검사)
 
-    ![screenshot_realtime_inspection](assets/screenshot_realtime_inspection.png)  
+    ![vision_manager_program_realtime_inspection](assets/vision_manager_program_realtime_inspection.gif)  
 
 ## Innoeye Firmware Updator 어플리케이션 개발
 
