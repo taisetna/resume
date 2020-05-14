@@ -159,7 +159,7 @@ GigE 표준 카메라 인터페이스를 지원하였기 때문에 추후 타사
 
 ![io_ui_design](assets/io_ui_design.png)
 
-![io_io](assets/io_ui.png)
+![setup_io](assets/visionmanager_setup_io.gif)
 
 ##### 커스텀 UI 컨트롤 내부 코드 개선
 
@@ -296,15 +296,11 @@ GigE 표준 카메라 인터페이스를 지원하였기 때문에 추후 타사
 
   하지만 기존 화면의 경우 편집모드에서 변경 가능한 항목과 아닌 것이 외관상으로는 전혀 구분되지 않았기 때문에, 처음 화면을 접했을 때 혼란스럽다는 피드백이 많았었다.
 
- ![connect_camera_edit_before_disable](assets/connect_camera_edit_before_disable.png)
-
- ![connect_camera_edit_before_enable](assets/connect_camera_edit_before_enable.png)
+![visionmanager_connect_device_before](assets/visionmanager_connect_device_before.gif)
 
  이에 개선한 화면에서는 편집모드로 전환시 변경가능한 항목의 배경색을 달리 표현되도록 함으로써 사용자 직관성을 높였다.
 
- ![connect_camera_edit_after_disable](assets/connect_camera_edit_after_disable.png)
-
- ![connect_camera_edit_after_enable](assets/connect_camera_edit_after_enable.png)
+![visionmanager_connect_device_after](assets/visionmanager_connect_device_after.gif)
 
 ##### 카메라 제어 모듈 신규 개발
 
