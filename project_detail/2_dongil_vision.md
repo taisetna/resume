@@ -12,7 +12,12 @@
 
 * 기간 : 2020.02.06 ~ 2020.03.27
 * 개발 언어 : C++(MFC)
-* 사용 라이브러리 : CoreBase(문자열 처리 라이브러리), CoreSerial(시리얼 통신 라이브러리), CoreEhternet(소켓 통신 라이브러리), AAEON HiSafe(AAEON PC 내장 디지털 입출력 장치 라이브러리), JsonCpp(설정파일 처리)
+* 사용 라이브러리 
+  * CoreBase(문자열 처리 자체 개발 라이브러리)
+  * CoreSerial(시리얼 통신 자체 개발 라이브러리)
+  * CoreEhternet(이더넷 통신 자체 개발 라이브러리)
+  * AAEON HiSafe(AAEON 디지털 입출력 장치 제어 라이브러리)
+  * JsonCpp(Json 포맷 설정파일 처리 라이브러리)
 
 #### 담당 파트
 
@@ -107,7 +112,16 @@ PLC는 Programmable Logic Controller의 약자로 공장 자동화 라인에서 
 
 * 기간 : 2019.01.07 ~ 2019.08.30
 * 개발 언어 : C++(MFC)
-* 사용 라이브러리 : CoreBase(문자열 처리 라이브러리), CoreCV(OpenCV 기반 이미지 프로세싱 라이브러리) STL, OpenCV, Pylon SDK(Basler 카메라), JsonCpp(설정파일 처리), GDI+, BCGControlBar, 기타 UI 오픈소스
+* 사용 라이브러리 
+  * CoreBase(문자열 처리 자체 개발 라이브러리)
+  * CoreCV(OpenCV 기반 이미지 프로세싱 자체 개발 라이브러리) 
+  * STL(데이터 처리) 
+  * OpenCV(이미지 프로세싱 라이브러리)
+  * Pylon SDK(Basler 카메라 제어 라이브러리)
+  * JsonCpp(Json 포맷 설정파일 처리 라)
+  * GDI+
+  * BCGControlBar (커스텀 UI 상용 라이브러리)
+  * UI 오픈소스 라이브러리
 
 #### 담당파트
 
@@ -244,7 +258,15 @@ GigE 표준 카메라 인터페이스를 지원하였기 때문에 추후 타사
 
 * 기간 : 2017.12.01 ~ 2018.12.31
 * 개발 언어 : C++(MFC)
-* 사용 라이브러리 : CoreBase(자체 제작한 이더넷 통신, 문자열 처리 라이브러리), STL, OpenCV, GDI+, CImage, GDI+, BCGControlBar, 기타 UI 오픈소스
+* 사용 라이브러리 
+  * CoreBase(문자열 처리 자체 개발 라이브러리)
+  * CoreEthernet(이더넷 통신 자체 개발 라이브러리)
+  * STL(데이터 처리)
+  * OpenCV(이미지 프로세싱 라이브러리) 
+  * GDI+
+  * CImage(이미지 프로세싱 오픈 소스 라이브러리)
+  * BCGControlBar(커스텀 상용 UI 라이브러리) 
+  * UI 오픈소스 라이브러리
 
 #### 담당파트
 
@@ -348,7 +370,9 @@ GigE 표준 카메라 인터페이스를 지원하였기 때문에 추후 타사
 
 ### 개요
 
-자사 스마트 카메라(이하 Innoeye)에 펌웨어를 업로드 할 수 있는 어플리케이션을 개발하는 사이드 프로젝트였다. ![firm_updater_before](assets/firm_updater_before.png)  
+자사 스마트 카메라(이하 Innoeye)에 펌웨어를 업로드 할 수 있는 어플리케이션을 개발하는 사이드 프로젝트였다. 
+
+![firm_updater_before](assets/firm_updater_before.png)  
 
 이미 동일한 기능을 하는 어플리케이션이 존재했었으나, 단순히 Innoeye와 연결해서 펌웨어만 업로드 할 수 있는 기능 제공했었기 때문에, 현재 연결된 디바이스나 , 업로드할 펌웨어 파일의 정보 등을 확인할 수 없어 불편한 점이 있었다. 
 
@@ -362,7 +386,9 @@ GigE 표준 카메라 인터페이스를 지원하였기 때문에 추후 타사
 
 * 기간 : 2018.07.02 ~ 2018.07.20
 * 개발 언어 : C++(MFC)
-* 사용라이브러리 : innoeye Vision Manager 프로젝트시 개발 제어 모듈, MFC 기본 컨트롤 및 UI 오픈 라이브러리 소스
+* 사용라이브러리 
+  * innoeye Vision Manager 프로젝트시 개발 제어 모듈
+  * UI 오픈 소스 라이브러리
 
 #### 담당파트
 
@@ -421,9 +447,13 @@ UI의 디테일한 부분도 이번 프로젝트에서 중요한 부분으로 �
 ### 세부내용
 
 * 기간 :  2017.03.13 ~ 2018.02.09
-
 * 사용언어 : C++(MFC)
-* 사용 라이브러리 : STL, GDI+, OpenCV, BCGControlBar
+* 사용 라이브러리
+  * Zebra Scanner SDK(Zebra 바코드 리더기 제어 라이브러리) 
+  * STL(데이터 처리)
+  * GDI+
+  * OpenCV(이미지 프로세싱 라이브러리)
+  * BCGControlBar(커스텀 상용 UI 라이브러리)
 
 #### 담당파트
 
