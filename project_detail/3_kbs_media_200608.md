@@ -10,7 +10,9 @@ VERTIGO는 세로형 영상. 소위 말하는 세로 직캠 영상 제작에 특
 
 VERTIGO는 보다 효율적이고 퀄리티 높은 세로형 영상 제작이 가능하도록  KBS 기술 연구소에서 개발한 얼굴 인식과 클러스터링 기술이 Face AI 엔진이 탑재된 멀티뷰 미디어 편집 솔루션으로, 현재(21년 3월 1일 기준) 유튜브 KBS Kpop 채널에서 서비스중인 뮤직뱅크 세로 직캠 컨텐츠인 K-FANCAM 제작에 적극 활용중에 있다.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Az6yUzFDz1U" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[<img src="https://img.youtube.com/vi/Az6yUzFDz1U/0.jpg" height="45%" width="45%">](https://youtu.be/Az6yUzFDz1U)
+
+(이미지 클릭시 유튜브 영상으로 이동)
 
 본 프로젝트는 KBS 기술 연구소에서 발주한 기능 개선건으로, 기존에 연구소에서 사용중인 2.0 버전에 대한 UI/UX 개선과 함께 고속 렌더링 모듈 연동을 통한 멀티 GPU 환경에서 렌더링 속도 향상, 세로 직캠 영상 렌더링 중 편집 작업 기능과 Face AI 엔진 분석 데이터 처리 속도 향상 등 어플리케이션 성능 향상에 초점을 맞춰 진행되었다.
 
