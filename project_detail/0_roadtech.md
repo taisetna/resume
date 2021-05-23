@@ -586,6 +586,4 @@ UI 설계시 조사중인 장비로부터 취득되는 데이터를 수치 정�
 
 ### 스크린샷
 
-![screenshot_road_water_analyze_application](assets/screenshot_road_water_analyze_application.png)  
-
-만약 지금이었다면, 각 구간의 횡방향 데이터는 서로 독립적이므로 종방향 10m 씩 나눠서 다수의 쓰레드를 사용하여 분석 시간을 좀 더 단축 시킬 수 있지 않았을까 하는 생각이 든다.
+![screenshot_road_water_analyze_application](assets/screenshot_road_water_analyze_application.png)
